@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Quality Prediction</title>
+    <style>
+        body{
+            background-image: url(https://images.cnbctv18.com/wp-content/uploads/2022/04/Milk-1019x573.jpg);
+            background-size: cover;
+            /* display: flex; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><center> Milk Quality Prediction </h1>
+    <form method="GET" action="/predict_milk_quality">
+
+        <label>pH:</label>
+        <select name = "pH">
+            <option value = "3.0">3.0</option>
+            <option value = "4.5">4.5</option>
+            <option value = "4.7">4.7</option>
+            <option value = "5.5">5.5</option>
+            <option value = "5.6">5.6</option>
+            <option value = "6.4">6.4</option>
+            <option value = "6.5">6.5</option>
+            <option value = "6.6">6.6</option>
+            <option value = "6.7">6.7</option>
+            <option value = "6.8">6.8</option>
+            <option value = "7.4">7.4</option>
+            <option value = "8.1">8.1</option>
+            <option value = "8.5">8.5</option>
+            <option value = "8.6">8.6</option>
+            <option value = "9.0">9.0</option>
+            <option value = "9.5">9.5</option>
+
+        </select>
+
+        <br>
+        <br>
+
+        <label>Temprature:</label>
+        <input type = "text" name = "Temprature">
+
+        </select>
+
+        <br>
+        <br>
+
+        <label>Taste:</label>
+        <select name = "Taste">
+            <option value = "Good">Good</option>
+            <option value = "Bad">Bad</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Odor:</label>
+        <select name = "Odor">
+            <option value = "Good">Good</option>
+            <option value = "Bad">Bad</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Fat:</label>
+        <select name = "Fat">
+            <option value = "High">High</option>
+            <option value = "Low">Low</option>
+
+        </select>
+        <br>
+        <br>
+
+        <label>Turbidity:</label>
+        <select name = "Turbidity">
+            <option value = "High">High</option>
+            <option value = "Low">Low</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label>Colour Range:</label>
+        <select name = "Colour">
+            <option value = "255">255</option>
+            <option value = "254">254</option>
+            <option value = "253">253</option>
+            <option value = "250">250</option>
+            <option value = "248">248</option>
+            <option value = "247">247</option>
+            <option value = "246">246</option>
+            <option value = "245">245</option>
+            <option value = "240">240</option>
+
+        </select>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <h4><strong>Your quality of milk is <b> {{ prediction }} </b></strong></h4>
+
+    </center>
+    </form>
+
+   
+</body>
+</html>
