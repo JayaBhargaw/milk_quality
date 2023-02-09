@@ -24,7 +24,8 @@ def predict_milk_quality():
             Colour = int(data('Colour'))
 
             if Temprature>90 or Temprature<34:
-                return  jsonify({"Message" : "enter correct value of Temprature"})
+                #return  jsonify({"Message" : "enter correct value of Temprature"})
+                return  render_template('index.html',prediction2 = 'Enter the Valid Value of Temprature')
 
             else:
 
@@ -32,7 +33,7 @@ def predict_milk_quality():
                 quality = milk_predict.get_milk_quality()
 
                 #return  jsonify({"Result" : f"quality of milk is: {quality}"})
-                return  render_template('index.html',prediction = quality)
+                return  render_template('index.html',prediction = 'Your quality of milk is '+quality)
 
         else:
             data = request.args.get
@@ -47,7 +48,8 @@ def predict_milk_quality():
             Colour = int(data('Colour'))
 
             if Temprature>90 or Temprature<34:
-                return  jsonify({"Message" : "enter correct value of Temprature"})
+                #return  jsonify({"Message" : "enter correct value of Temprature"})
+                return  render_template('index.html',prediction2 = 'Enter the Valid Value of Temprature')
 
             else:
                 milk_predict = MilkQuality(pH, Temprature, Taste, Odor, Fat , Turbidity,Colour)
@@ -56,7 +58,7 @@ def predict_milk_quality():
             
             
                 #return  jsonify({"Result" : f"quality of milk is: {quality}"})
-                return  render_template('index.html',prediction = quality)
+                return  render_template('index.html',prediction = 'Your quality of milk is '+quality)
 
             
 
